@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Encuentra tu vehiculo</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <!---->
+    <link href="css/agency.css" rel="stylesheet">
+</head>
+
+
+<body id="page-top" ng-controller="MainController">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Bienvenido. {{mensaje}}</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#automoviles">Automoviles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#camperos">Camperos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#camionetas">Camionetas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#vehiculosPesados">Vehiculos pesados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in" style="color:black;">Encuentra tu vehiculo facilmente!</div>
+                <div class="intro-heading">Para mas informacion contactame</div>
+                <a class="btn btn-xl js-scroll-trigger" href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </header>
+    <!-- Automoviles -->
+    <div id="automoviles">
+        <section id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Automoviles</h2>
+                        <h3 class="section-subheading text-muted">Vehiculos automoviles.</h3>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a class="portfolio-link" ng-click="MostrarModalDetalleVehiculo()">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-2x">Click para ver más detalles</i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/cars/mazda3_id001_img1.webp" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Mazda 3</h4>
+                            <p class="text-muted">$41,000,000 <br> 2014 <br> Automático</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a class="portfolio-link" ng-click="MostrarModalDetalleVehiculo()">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-2x">Click para ver más detalles</i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/cars/suzuki_alto_img1.webp" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Suzuki Alto</h4>
+                            <p class="text-muted">$18,000,000 <br> 2016 <br> Mecánico</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a class="portfolio-link" ng-click="MostrarModalDetalleVehiculo()">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-2x">Click para ver más detalles</i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/cars/chevrolet_spark_gt_img2.webp" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Chevrolet Spark GT</h4>
+                            <p class="text-muted">$23,000,000 <br> 2011 <br> Mecánico</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+    </div>
+    </section>
+    </div>
+
+    <!-- Camperos -->
+    <div id="camperos">
+        <section class="bg-light" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Camperos</h2>
+                        <h3 class="section-subheading text-muted">Vehículos camperos.</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a class="portfolio-link" ng-click="MostrarModalDetalleVehiculo()">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-2x">Click para ver más detalles</i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/cars/mazda3_id001_img1.webp" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Mazda 3</h4>
+                            <p class="text-muted">$41,000,000 <br> 2014 <br> Automático</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Camionetas -->
+    <div id="camionetas">
+        <section id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Camionetas</h2>
+                        <h3 class="section-subheading text-muted">Vehiculos camionetas.</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a class="portfolio-link" ng-click="MostrarModalDetalleVehiculo()">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-2x">Click para ver más detalles</i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/cars/mazda3_id001_img1.webp" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Mazda 3</h4>
+                            <p class="text-muted">$41,000,000 <br> 2014 <br> Automático</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <!-- Vehiculos pesados -->
+    <div id="vehiculosPesados">
+        <section class="bg-light" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Vehiculos pesados</h2>
+                        <h3 class="section-subheading text-muted">Vehículos pesados.</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a class="portfolio-link" ng-click="MostrarModalDetalleVehiculo()">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-2x">Click para ver más detalles</i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="img/cars/mazda3_id001_img1.webp" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Mazda 3</h4>
+                            <p class="text-muted">$41,000,000 <br> 2014 <br> Automático</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contacto</h2>
+                    <h3 class="section-subheading text-muted">Tenemos para usted el mejor vehiculo</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="row" style="margin-right:8%;">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <img class="img-fluid" src="img/foto_jaime.jpg" style="width: 72%; margin-left:25%;">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nombresUsuario" style="color:white">
+                                    Nombre:
+                                </label>
+                                <input class="form-control" id="name" type="text" value="Jaime Alberto Benjumea Alzate" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombresUsuario" style="color:white">
+                                    Correo electrónico:
+                                </label>
+                                <input class="form-control" id="email" type="email" value="jaimealbertobenjumea@correo.com" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombresUsuario" style="color:white">
+                                    Teléfono:
+                                </label>
+                                <input class="form-control" id="phone" type="tel" value="3178135793" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Your Website 2017</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Angular -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Bootstrap and bootstrap core JavaScript -->
+
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- Custom scripts for this template para dejar estatico el footer-->
+    <script src="js/agency.min.js"></script>
+
+    <!-- Angular modal service y controller modal confirmar -->
+    <script src="js/angular-modal-service/angular-modal-service.min.js"></script>
+
+
+</body>
+</html>

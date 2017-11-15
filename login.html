@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Encuentra tu vehiculo</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+
+        <!-- Custom styles for this template -->
+        <!---->
+        <link href="css/login.css" rel="stylesheet">
+
+        <!--tooltip-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </head>
+
+    <body id="page-top" ng-controller="LoginController" class="background">
+
+        <div class="container">
+
+            <div class="row" id="pwd-container">
+                <div class="col-md-4"></div>
+
+                <div class="col-md-4">
+                    <section class="login-form">
+                        <form role="login">
+                            <img src="img/logo.png"  class="logoImage" alt="" />
+                            <input type="email" name="email" placeholder="Correo" required class="form-control input-lg" ng-model="credentials.user" />
+
+                            <input type="password" class="form-control input-lg" id="password" placeholder="Contraseña" required="" ng-model="credentials.password"/>
+
+
+                            <div class="pwstrength_viewport_progress"></div>
+
+
+                            <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" ng-click="refresh()">Ingresar</button>
+                            <div>
+								<p>  {{mensaje}} </p>
+                                <a href="#">refrescar contraseña.</a>
+                            </div>
+
+                        </form>
+
+                        <div class="form-links">
+                            <a href="index.html">www.miscarrosjaime.com</a>
+                        </div>
+                    </section>  
+                </div>
+
+                <div class="col-md-4"></div>
+
+
+            </div>  
+
+
+        </div>
+
+		
+		
+		<!-- Angular -->
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script src="app.js"></script>
+		
+		<!-- Angular modal service y controller modal confirmar -->
+		<script src="js/angular-modal-service/angular-modal-service.min.js"></script>
+		
+
+    </body>
+
+</html>

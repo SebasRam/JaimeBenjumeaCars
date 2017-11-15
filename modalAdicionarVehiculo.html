@@ -1,0 +1,116 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">{{ title }}</h4>
+                <a type="button" href="" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+            </div>
+
+            <div class="modal-body">
+                <div id="alerts-modal-gestiona-usuarios">
+                </div>
+                <form name="adicionarUsuarioForm" style="max-width: 100%;" novalidate ui-validation-submit="">
+                    
+					<!--Combo Box para tipo de vehiculo-->
+                    <div class="form-group">
+                        <label for="tipo_vehiculo">
+                            Tipo de vehiculo:
+                        </label>
+                        <select class="form-control" name="tipo_vehiculo" ng-model="vehiculo.tipoVehiculoId" data-ng-options="tv.tipoVehiculoId as tv.nombre for tv in tiposVehiculoExistentes">
+                            <option value="">--Seleccione--</option>
+                        </select>
+                    </div>
+                    <!--Combo Box para tipo de autenticacion-->
+					
+					<!--Combo Box para marca-->
+                    <div class="form-group">
+                        <label for="marca">
+                            Marca:
+                        </label>
+                        <select class="form-control" name="marca" ng-model="vehiculo.marcaId" data-ng-options="mar.marcaId as mar.nombre for mar in marcasExistentes" ng-change="ConsultarModelosAsociadoMarca(vehiculo.marcaId)">
+                            <option value="">--Seleccione--</option>
+                        </select>
+                    </div>
+                    <!--Combo Box para tipo de autenticacion-->
+					
+					<!--Combo Box para modelo-->
+                    <div class="form-group" ng-if="modelosAsociados!=null">
+                        <label for="modelo">
+                            Modelo:
+                        </label>
+                        <select class="form-control" name="modelo" ng-model="vehiculo.modeloId" data-ng-options="mod.modeloId as mod.nombre for mod in modelosAsociados">
+                            <option value="">--Seleccione--</option>
+                        </select>
+                    </div>
+                    <!--Combo Box para tipo de autenticacion-->
+					
+					<!--Combo Box para año-->
+                    <div class="form-group">
+                        <label for="anio">
+                            Año:
+                        </label>
+                          <select class="form-control" name="anio" ng-model="vehiculo.anio" data-ng-options="anio.anio as anio.anio for anio in anios" >
+                             <option value="">--Seleccione--</option>
+                        </select> 						
+                    </div>
+                    <!--Combo Box para tipo de autenticacion-->
+					
+					
+					  <!--Descripcion-->
+                    <div class="form-group" style="clear: left;" >
+                        <label for="objeto">
+                            Descripcion:<span class="symbol required"></span>
+                        </label>
+                        <textarea class="form-control" rows="3" name="objeto" ng-model="vehiculo.descripcion"></textarea>                        
+                    </div>
+                    <!--objeto-->
+					
+					
+					<!--precio-->
+                    <div class="form-group" >
+                        <label for="nombre_convenio">
+                            Precio:<span class="symbol required"></span>
+                        </label>
+                        <!-- <input type="text" ng-maxlength="450" maxlength="450" class="form-control" name="nombreConvenio" ng-model="convenio.nombreConvenio" autocomplete="off" />                         -->
+						<div class="form-group input-group">
+                            <span class="input-group-addon"><i class="input-group-addon"></i></span>
+                            <input type="text" class="form-control SePresu" name="precio" ng-model="vehiculo.precio" num-neg="false"  awnum="" num-sep="," num-int="12" num-fract="2" num-thousand="true" autocomplete="off" />
+                        </div>                   
+				   </div>
+                    <!--precio-->
+					
+					
+					
+					
+					
+					
+                    <!--input para imagen de usuario-->
+                    <div class="form-group">
+                        <label for="tipo_autenticacion">
+                            Imagen de usuario:
+                        </label>
+                        <input type="file" accept="application/jpg" id="file" name="file" onchange="angular.element(this).scope().ObtenerDetalleArchivo(this)" />
+                        <br />
+                        <div id="alerts-foto-usuario-warning">
+                        </div>
+                    </div>
+                    <!--input para imagen de usuario-->
+
+
+                    <div class="modal-footer" style="border-top: 0">
+                        <a style="color:black; border-color:white" type="button" href="" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                        <button type="button" ng-click="GuardarVehiculo()" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+
+
+
+
+
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

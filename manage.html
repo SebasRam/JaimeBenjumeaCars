@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Encuentra tu vehiculo</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css" rel="stylesheet">
+
+
+</head>
+<body id="page-top" class="admBackground" ng-controller="ManageController">
+    <header class="sechead">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">
+                    Usuario: Don Miguel.  {{mensaje}}
+                    <a class="btn btn-out" data-toggle="modal" data-target="">Salir</a>
+                </div>
+                <div class="intro-heading">Administración de vehículos</div>
+                <span data-toggle="tooltip" data-placement="right" title="Click aquí para adicionar un vehículo">
+                    <a class="btn btn-primary" ng-click="MostrarModalAdicionarVehiculo()">Adicionar vehículo</a>
+                </span>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <p class=".navbar-brand"></p>
+        <div class="container">
+            <table class="table table-hover carManage" border="0">
+                <thead>
+                    <tr>
+					<th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Año</th>
+                        <th>Foto</th>
+                        <th>Estado</th>
+                        <th>Modificar</th>
+                        <th>Vendido</th>
+                        <th>borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="vehiculo in vehiculosExistentes">
+					<td>{{vehiculo.marca}}</td>
+                        <td>{{vehiculo.modelo}}</td>
+                        <td>{{vehiculo.anio}}</td>
+                        <td><img class="smallCar zoom" ng-src="{{vehiculo.fotoPrincipalId}}" alt=""></td>
+                        <td>{{vehiculo.estado}}</td>
+                        <td>
+                            <span data-toggle="tooltip" data-placement="top" title="Actualizar información">
+                                <img class="smallIcon zoom2" src="img/manager/edit.png" ng-click="MostrarModalAdicionarVehiculo()">
+                            </span>
+                        </td>
+                        <td>
+                            <span data-toggle="tooltip" data-placement="top" title="Marcar vehículo como vendido">
+                                <img class="smallIcon zoom2" src="img/manager/sold.png" ng-click="MostrarModalConfirmar()">
+                            </span>
+                        </td>
+                        <td>
+                            <span data-toggle="tooltip" data-placement="top" title="Borrar vehículo">
+                                <img class="smallIcon zoom2" src="img/manager/delete.png" ng-click="MostrarModalConfirmar()">
+                            </span>
+                        </td>
+                    </tr>
+                    <button ng-click="Init()">Refrescar</button>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Angular -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Angular modal service y controller modal confirmar -->
+    <script src="js/angular-modal-service/angular-modal-service.min.js"></script>
+
+
+</body>
+</html>

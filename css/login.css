@@ -79,3 +79,9 @@ img.logoImage{
     max-width: 100%;
     height: auto;
 }
+
+.wrongPass{
+    color: red;
+    font-weight: bold;
+	
+}
